@@ -1,0 +1,39 @@
+{
+    "articles": [
+        {
+            "title": "mytitle",
+            "slug": "mytitle-7fs2c7",
+            "body": "mybody",
+            "createdAt": "2021-07-14T02:48:12.883Z",
+            "updatedAt": "2021-07-14T02:48:12.883Z",
+            "tagList": [],
+            "description": "mydesc",
+            "author": {
+                "username": "Noel Poo",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 1
+        },
+        {
+            "title": "Agilizei Titulo",
+            "slug": "agilizei-titulo-a07vil",
+            "body": "Reprehenderit incidunt consequuntur impedit dolorem. Veniam modi maxime consequatur et. Excepturi minus consectetur esse voluptas eveniet. Dolore modi ducimus non praesentium rerum ipsum distinctio.",
+            "createdAt": "2021-07-14T02:47:05.983Z",
+            "updatedAt": "2021-07-14T02:47:05.983Z",
+            "tagList": [],
+            "description": "Cypress",
+            "author": {
+                "username": "Paulo Agilizei",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 5
+        }
+    ],
+    "articlesCount": 500
+}
