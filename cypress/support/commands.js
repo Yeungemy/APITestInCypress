@@ -30,9 +30,23 @@ Cypress.Commands.add('openHomePge', () => {
     cy.visit('/');
 });
 
-Cypress.Commands.add('loginToApplication', (email = 'emyzheng80@gmail.com', pwd = '123456789') => {
-    cy.openHomePge();
-    cy.get('[placeholder="Email"]').type(email);
-    cy.get('[placeholder="Password"]').type(pwd);
-    cy.get('form').submit();
+Cypress.Commands.add('loginToApplication', () => {
+    const userCredentials = {
+        "user": {
+            "email": "emyzheng80@gmail.com",
+            "password": "123456789"
+        }
+    };
+    
+    cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
+    .its('body')
+    .then(body => {
+        const token = body.user.token;
+        cy.wrap(token).as('token');
+        cy.visit('/', { 
+            onBeforeLoad(win) {
+                win.localStorage.setItem('jwtToken', token);
+            }
+        } );
+    });
 });
